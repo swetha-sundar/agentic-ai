@@ -1,0 +1,26 @@
+digraph StressTestWorkflow {
+	rankdir=LR size="8,5"
+	"Event Signal Agent" [label="<<b>Event Signal Agent</b>>
+Detects geopolitical/macro events from news & alerts" shape=component]
+	"Scenario Builder Agent" [label="<<b>Scenario Builder Agent</b>>
+Builds structured macro scenarios from events" shape=component]
+	"Market Data Fetch Agent" [label="<<b>Market Data Fetch Agent</b>>
+Fetches market data like yield curves, spreads" shape=component]
+	"Risk Factor Shock Generator Agent" [label="<<b>Risk Factor Shock Generator Agent</b>>
+Applies stress shocks to market data" shape=component]
+	"Portfolio Valuation Agent" [label="<<b>Portfolio Valuation Agent</b>>
+Revalues portfolio under stressed market conditions" shape=component]
+	"Liquidity & Spread Stress Agent" [label="<<b>Liquidity & Spread Stress Agent</b>>
+Models bid-ask widening and liquidity stress" shape=component]
+	"Report Generator Agent" [label="<<b>Report Generator Agent</b>>
+Generates reports and dashboards" shape=component]
+	"Dashboard Agent" [label="<<b>Dashboard Agent</b>>
+Presents interactive visualization to human users" shape=component]
+	"Event Signal Agent" -> "Scenario Builder Agent"
+	"Scenario Builder Agent" -> "Market Data Fetch Agent"
+	"Market Data Fetch Agent" -> "Risk Factor Shock Generator Agent"
+	"Risk Factor Shock Generator Agent" -> "Portfolio Valuation Agent"
+	"Portfolio Valuation Agent" -> "Liquidity & Spread Stress Agent"
+	"Liquidity & Spread Stress Agent" -> "Report Generator Agent"
+	"Report Generator Agent" -> "Dashboard Agent"
+}
