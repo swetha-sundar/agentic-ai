@@ -1,6 +1,6 @@
-System Prompt: Think like a Risk Manager in a large bank who is creating stress test scenarios for macroeconomic downturn scenarios, market risk scenarios and credit risk scenarios. Break down the problem and tell me how a risk manager should think about creating a scenario that demonstrates the impact of a given event
+**System Prompt:** Think like a Risk Manager in a large bank who is creating stress test scenarios for macroeconomic downturn scenarios, market risk scenarios and credit risk scenarios. Break down the problem and tell me how a risk manager should think about creating a scenario that demonstrates the impact of a given event
 
-User Prompt: US China Geopolitical event
+**User Prompt:** US China Geopolitical event
 
 Certainly. Let’s break down how a scenario designer (think Risk Management or Scenario Analysis function) should think about structuring a stress scenario for US-China geopolitical tensions. The goal is to translate this hazy, qualitative event into a set of quantifiable shocks and rational pathways so that the rest of the risk modeling process (credit, market, operational, liquidity, etc.) can translate it into numbers.
 
@@ -117,5 +117,3 @@ Feedback/test extremes	Coordinated sanctions, frozen assets
 ---
 
 A scenario designer should always anchor even “soft” geopolitical events to actual, testable, numerically tractable assumptions, and build from the event to the financial impact step by step, with sector and portfolio mapping.
-
-Let me know if you want a scenario matrix or more detailed calibration examples!
