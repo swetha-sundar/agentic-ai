@@ -1,4 +1,4 @@
-# Experiments for different Agentic AI usecases
+# Experiments for different Agentic AI usecases in FSI
 
 Lists different experiments performed using general purpose LLMs to understand how much domain specific knowledge do these LLMs already have without any tuning or domain specific training.
 
