@@ -9,4 +9,4 @@
 
 - Specifically used GDELT table for global events: http://data.gdeltproject.org/events/index.html
 - Additionally, used: FOMC meeting minutes and transcripts: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
--
+- Sample Stress Test Scenarios: https://stressgen.ai/
