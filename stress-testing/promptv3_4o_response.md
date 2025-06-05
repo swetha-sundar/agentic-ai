@@ -1,9 +1,11 @@
 **System Prompt:** Think like a Risk Manager who creates stress test scenarios for fixed income portfolios comprising predominantly AAA bonds (e.g., U.S. Treasuries, agency debt, top-rated sovereigns). Break down the problem and tell me how a risk manager should think about creating a scenario that demonstrates the impact of a given event.
 
 --------------------------------------------------------------------------
-**UserPrompt:** US China Geopolitical Tension
+**User Prompt:** US China Geopolitical Tension
+
 --------------------------------------------------------------------------
 **Response:**
+```text
 The goal is to build a scenario around **U.S.–China geopolitical tension** that realistically captures market and credit dynamics, while stressing the portfolio's key risk factors.
 
 ---
@@ -138,14 +140,16 @@ Summarize the impact to stakeholders:
 | 7. Communicate & Mitigate    | Stress test results + action plan                        |
 
 ---
+```
 --------------------------------------------------------------------------
 **User Prompt**: Produce a report output
---------------------------------------------------------------------------
 
+Response:
+
+```text
 Below is a **sample stress test report output** for a **fixed income portfolio predominantly composed of AAA-rated bonds**, under the scenario of **U.S.–China Geopolitical Tension**. This is written in a professional risk management format that would typically be used internally within a large bank.
 
 ---
-
 # **Stress Test Report: U.S.–China Geopolitical Tension Scenario**
 
 **Prepared by:** Risk Management
@@ -227,13 +231,16 @@ Below is a **sample stress test report output** for a **fixed income portfolio p
 This stress test reveals that even high-quality portfolios are **not immune to geopolitical events**, primarily through **spread and liquidity channels**. However, due to the flight-to-quality nature of AAA assets, this portfolio experiences a **net gain** under the modeled scenario.
 
 Ongoing monitoring of **China’s U.S. Treasury holdings**, **market liquidity metrics**, and **central bank signaling** will be critical to proactively manage this risk.
-
+```
 ---
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+
 **User Prompt**: Assuming the availability of task-specific agents and APIs for data access in relevant sources, design an agentic workflow to implement this process. List and describe the task agents, skills, APIs and data sources you will use to implement the workflow.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 **Response**:
 
+```
 Designing an **agentic workflow** to implement a stress testing process for a **AAA-rated fixed income portfolio under geopolitical stress** (e.g., U.S.–China tensions) involves orchestrating a set of intelligent agents that perform specific tasks, collaborate via APIs, and pull data from structured and unstructured sources.
 
 Here’s a structured agentic system design with modular **Task Agents**, their **skills**, the **APIs/data sources** they use, and how they interact.
@@ -246,7 +253,6 @@ Here’s a structured agentic system design with modular **Task Agents**, their 
 
 ## 🏗️ **1. Architecture Overview**
 
-```text
 [Event Signal Agent]
         ↓
 [Scenario Builder Agent]
@@ -262,7 +268,7 @@ Here’s a structured agentic system design with modular **Task Agents**, their 
 [Report Generator Agent]
         ↓
 [Dashboard Agent / Human Risk Manager]
-```
+
 
 ---
 
@@ -394,9 +400,11 @@ Here’s a structured agentic system design with modular **Task Agents**, their 
 * **Dashboard Views** (P\&L waterfall, risk attribution, scenario sliders)
 * **Audit Trail (scenario versioning, model parameters)**
 
+```
 ---
 --------------------------------------------------------------------------
 **User Prompt**: mermaid diagram
+
 --------------------------------------------------------------------------
 
 ```mermaid
@@ -415,6 +423,7 @@ flowchart LR
 
 --------------------------------------------------------------------------
 **User Prompt**: Draw a mermaid diagram of the agentic architecture
+
 --------------------------------------------------------------------------
 
 ```mermaid
@@ -461,19 +470,21 @@ graph TD
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 **User Prompt**:Now expand the architecture to a detailed agentic design, up to a reasonable modular design for recommended implementation
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 **Response:**
+
 Here's an expanded **modular agentic architecture** for implementing a robust, scalable, and auditable **stress testing system for fixed income portfolios**, tailored for financial institutions using agents, APIs, and data orchestration.
 
 ---
 
-## 🧠 **Expanded Agentic Architecture for Scenario-Based Stress Testing**
+ 🧠 **Expanded Agentic Architecture for Scenario-Based Stress Testing**
 
 This architecture is modular and adheres to principles of **separation of concerns**, **microservice compatibility**, and **data lineage**—key for regulatory stress testing environments (e.g., CCAR, EBA).
 
 ---
 
-### 🧱 **Architecture Overview: Modular Layers**
+ 🧱 **Architecture Overview: Modular Layers**
 
 ```
 +--------------------+
@@ -528,12 +539,11 @@ This architecture is modular and adheres to principles of **separation of concer
 ```
 
 ---
-
-### 🧩 **Detailed Modular Design by Agent Group**
+ 🧩 **Detailed Modular Design by Agent Group**
 
 ---
 
-## **1. Scenario Construction Layer**
+ **1. Scenario Construction Layer**
 
 These agents generate the “what-if” scenarios that seed downstream stress testing.
 
@@ -545,8 +555,7 @@ These agents generate the “what-if” scenarios that seed downstream stress te
 | **Historical Analog Agent** | Looks up similar past episodes (e.g., 2015 China deval, 2020 COVID) to infer stress magnitudes.                  | Internal market history DB                              |
 
 ---
-
-## **2. Data Layer**
+ **2. Data Layer**
 
 Handles acquisition and preprocessing of data needed for scenario calibration and valuation.
 
@@ -558,8 +567,7 @@ Handles acquisition and preprocessing of data needed for scenario calibration an
 | **Valuation Model API**     | Bond pricing engine interface (duration, convexity, YTM)        | QRM, Calypso, Murex                  |
 
 ---
-
-## **3. Risk Analysis Layer**
+ **3. Risk Analysis Layer**
 
 Core computation layer for applying stress and quantifying impacts.
 
@@ -572,7 +580,7 @@ Core computation layer for applying stress and quantifying impacts.
 
 ---
 
-## **4. Reporting Layer**
+ **4. Reporting Layer**
 
 Transforms raw outputs into consumable decision-support material.
 
@@ -583,8 +591,7 @@ Transforms raw outputs into consumable decision-support material.
 | **Alert Agent**            | Triggers emails or Slack alerts for threshold breaches (e.g., VaR limit). |
 
 ---
-
-## **5. Governance Layer**
+ **5. Governance Layer**
 
 Ensures auditability, configuration management, and version control.
 
@@ -596,7 +603,7 @@ Ensures auditability, configuration management, and version control.
 
 ---
 
-### 📈 **Mermaid Diagram: Modular Agentic Architecture**
+ 📈 **Mermaid Diagram: Modular Agentic Architecture**
 
 ```mermaid
 flowchart TD
@@ -645,18 +652,4 @@ flowchart TD
   M1 --> G3
   G1 --> D1
 ```
-
----
-
-## 🛠️ **Recommended Implementation Notes**
-
-| Component       | Technology Recommendation                                   |
-| --------------- | ----------------------------------------------------------- |
-| Agent Execution | Python microservices (FastAPI, Celery) or LangChain agents  |
-| Data Exchange   | JSON over REST APIs, or gRPC for low-latency                |
-| Orchestration   | Apache Airflow or Temporal.io                               |
-| Dashboard UI    | Streamlit, Plotly Dash, or React + REST                     |
-| Storage         | PostgreSQL (relational), MinIO (file), Neo4j (traceability) |
-| Model Hosting   | Dockerized ML models via FastAPI or TorchServe              |
-
 ---
